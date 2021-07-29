@@ -1,0 +1,52 @@
+/* static */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin-bottom: 0px;
+}
+
+/* welcome page */
+
+header {
+    padding: 20px 0 20px 0;
+    background: #f4f4f4;
+    color: orangered;
+}
+
+header h1{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* desc */
+
+.desc{
+    padding: 20px 0 20px 0;
+}
+
+.desc h2{
+    font-size: 20px;
+    color: grey;
+}
+
+/* content */
+
+.content{
+    padding: 20px;
+    background: #f4f4f4;
+    margin-top: 20px;
+    color: rgb(38, 38, 38);
+    font-size: 12px;
+}
+
+.docs{
+    padding: 20px;
+    border: none;
+    font-size: 15px;
+    background: orangered;
+    color: #fff;
+    margin-top: 20px;
+}

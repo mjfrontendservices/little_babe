@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Babe | Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .code {
+            padding: 10px;
+            background: rgb(41, 41, 41);
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 13px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            overflow-x: scroll;
+        }
+
+        /* global */
+        h3 {
+            margin: 10px 0 10px 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+
+        .path {
+            background: #bdbdbd;
+            padding: 5px;
+            color: rgb(158, 0, 0);
+        }
+
+        p {
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 29px;
+            margin: 10px 0 10px 0;
+        }
+
+        button {
+            padding: 10px;
+            background: orangered;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        img {
+            width: 100%;
+            margin: 10px 0 10px 0;
+        }
+
+        .container {
+            margin: auto;
+            width: 80%;
+            overflow: hidden;
+        }
+
+        .boundaries {
+            padding: 20px 0 20px 0;
+            background: #f4f4f4;
+            color: orangered;
+            margin: 20px 0 20px 0;
+        }
+
+        .boundaries h1 {
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .boundaries b {
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* header */
+        header {
+            padding: 20px 0 20px 0;
+            background: #f4f4f4;
+            color: orangered;
+        }
+
+        header h1 {
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* links */
+        .links {
+            padding: 20px 0 20px 0;
+        }
+
+        .links a {
+            font-size: 15px;
+            color: orangered;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+        }
+
+        /* getting started */
+        #gettingstarted {
+            padding: 20px 0 20px 0;
+        }
+
+        /* footer */
+        footer {
+            padding: 20px 0 20px 0;
+            text-align: center;
+            background: orangered;
+            color: #fff;
+        }
+
+        /* media queries */
+        @media(max-width: 550px) {
+            .container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Little Babe <i>v1.0</i></h1>
+            <h3>Documentation</h3>
+        </div>
+    </header>
+    <section class="links">
+        <div class="container">
+            <h3>Quick Links</h3>
+            <p>
+                <span><a href="#gettingstarted">Getting Started</a></span><br>
+                <span><a href="#install">Install</a></span><br>
+                <span><a href="#newpage">Create new page</a></span><br>
+                <span><a href="#routing">Routing</a></span><br>
+                <span><a href="#assets">Assets</a></span><br>
+                <span><a href="#includes">HTML Links and Scripts</a></span><br>
+                <span><a href="#database">Database Connection</a></span><br>
+                <span><a href="#appinstall">Custom Install Page</a></span><br>
+            </p>
+            <h3>Little Babe PHP Methods</h3>
+            <p>
+                <span><a href="#read">Read JSON file data</a></span><br>
+                <span><a href="#pushinsert">Insert data to JSON file (push)</a></span><br>
+                <span><a href="#unshiftinsert">Insert data to JSON file (unshift)</a></span><br>
+                <span><a href="#remove">Remove data from JSON file.</a></span><br>
+                <span><a href="#update">Update data from JSON file.</a></span><br>
+                <span><a href="#file">File upload.</a></span><br>
+            </p>
+            <h3>Little Babe Javascript Localstorage Methods</h3>
+            <p>
+                <span><a href="#locread">Read Localstorage Data.</a></span><br>
+                <span><a href="#locinsert">Insert Data to Localstorage.</a></span><br>
+                <span><a href="#locupdate">Update Data from Localstorage.</a></span><br>
+                <span><a href="#locdelete">Remove Data from Localstorage.</a></span><br>
+            </p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="gettingstarted">
+        <div class="container">
+            <h3>Getting Started</h3>
+            <p>Little Babe is a small PHP framework for hybrid PWA development. Unlike other PHP frameworks with MVC
+                (Model, View and Controller)
+                pattern, Little Babe is designed for
+                building hybrid progressive web applications
+                (installable in cross-platform and multiple devices from mobile, tablets and desktop) with
+                built-in functions for accessing localstorage browser API (for data persistency in the browser using
+                Javascript), JSON
+                file C.R.U.D (Create, Read, Update, Delete)
+                operations and file uploads in PHP.</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="install">
+        <div class="container">
+            <h3>Install</h3>
+            <p>
+                <b>Requirements:</b><br>
+                You should have git installed on your machine.<br>
+                If you're using Windows, open the terminal (command prompt) and navigate to <span
+                    class="path">htdocs</span> folder and type:
+            </p>
+            <div class="code">
+                <span>git clone https://github.com/mjfrontendservices/little_babe</span>
+            </div>
+            <p>
+                Or download the zip file.
+            </p>
+            <a href="./App/pageStructure.php" download>
+                <button>Download Little Babe v1.0</button>
+            </a>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="newpage">
+        <div class="container">
+            <h3>Create New Page</h3>
+            <p>
+                Navigate to <span class="path">App/Pages/</span> and create a new php file, for example: <span
+                    class="path">about.php</span> then copy the text from <span class="path">pageStructure.php</span>
+                and
+                paste it on the new php file, in this case, on about.php. The pageStructure.php file content should be
+                the template
+                for all php files (pages) inside the <span class="path">App/Pages/</span>, <span
+                    class="path">App/Post/</span> and <span class="path">App/Ajax/</span>
+                folders.
+            </p>
+            <p>
+                * all get requests (web pages) should be stored in the <span class="path">App/Pages</span> folder. This
+                serves as your views folder.
+                <br>
+                * all post requests (form submission and backend processing) should be stored on <span
+                    class="path">App/Post</span> folder. This
+                serves as your controllers or logic folder, and<br>
+                * all ajax requests will be stored on <span class="path">App/Ajax</span> folder when you want to pass
+                data to
+                the server using Javascript.
+            </p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="routing">
+        <div class="container">
+            <h3>Routing</h3>
+            <p>
+                In order to view your web pages in the browser, navigate to <span class="path">Routes/Routes.php</span>
+                file and register all your routes. For example: if you want to render the homepage.
+            </p>
+            <div class="code">
+                <pre>
+Route::set('home', function (){
+    Generate::get('home');
+});</pre>
+            </div>
+            <p>
+                The Route::set() method requires two arguments, the first argument is the route name. In this case,
+                <span class="path">'home'</span>. And the
+                second (callback function) argument
+                <span class="path">function (){ Generate::get('home'); })</span> is the file name of the page you
+                want to generate, in this case <span class="path">'home.php'</span>, you can remove <span
+                    class="path">.php</span> extension and make it <span class="path">'home'</span>. Now open your
+                Chrome browser and type <span class="path">http://localhost/(project_folder)/<b>home</b></span>. The
+                homepage should be rendered.
+            </p>
+            <p>
+                <b>Other generate methods:</b><br>
+                <span class="path">Generate::post('filename')</span> - for post request (form submission, backend
+                processing). This is linked to the <span class="path">App/Post/</span> folder.<br>
+                <span class="path">Generate::ajax('filename')</span> - for ajax request (sending data to the
+                server using Javascript/JQuery). This is linked to the <span class="path">App/Ajax/</span>
+                folder.<br><br>
+                If you need to generate a webpage, use the Generate::get() method.<br>
+                If you need to pass data to the server, use the Generate::post() method. And<br>
+                If you need to pass data to the server using Ajax, then use the Generate::ajax() method.<br><br>
+                <span class="path">Generate::install('installpage')</span> - for custom install page (default)<br>
+                <span class="path">Generate::docs('docs')</span> - for the documentation page (default)<br>
+            </p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="assets">
+        <div class="container">
+            <h3>Assets</h3>
+            <p>
+                All your assets should be stored in the <span class="path">Assets</span> folder.<br>
+                <span class="path">Assets/css</span> - for css files<br>
+                <span class="path">Assets/files</span> - for files (audio, video, pdf documents, etc...)<br>
+                <span class="path">Assets/img</span> - for images<br>
+                <span class="path">Assets/js</span> - for javascript files.<br>
+                <span class="path">Assets/libs</span> - for external libraries (default libraries: Minified Bootstrap
+                Libraries,
+                Font-Awesome, JQuery).<br>
+                <span class="path">Assets/little_babe</span> - for default files with Little Babe built-in core
+                functions.<br>
+            </p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="includes">
+        <div class="container">
+            <h3>HTML Links and Scripts</h3>
+            <p>
+                HTML head tag is located in <span class="path">Includes/head.php</span>. Link your css files, meta tags,
+                icons, and other css libraries here.<br>
+                Also HTML script tags are located in <span class="path">Includes/foot.php</span>. Link your Javascript
+                files
+                and other javascript libraries here.
+            </p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="database">
+        <div class="container">
+            <h3>Database Connection</h3>
+            <p>
+                Navigate to <span class="path">Database/databaseCredentials.json</span> configuration file for your
+                database credentials.
+            <div class="code">
+                <pre>
+[
+    {
+        "server_name": "localhost",
+        "server_username": "root",
+        "server_password": "root",
+        "database_name": "mydatabase"
+    }
+]</pre>
+            </div>
+            </p>
+            <p>
+                Write your own SQL scripts inside the <span class="path">Database/database.sql</span> and import it on
+                <span class="path">http://localhost/phpmyadmin</span>.
+            </p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="appinstall">
+        <div class="container">
+            <h3>Custom Install Page</h3>
+            <p>
+                Custom install page is a customized web page for installation promotion of your hybrid progressive web
+                app. If the user installs your web app, it will function like a normal hybrid application on user's
+                phone or
+                computer. Feel free
+                to
+                edit, add or delete the <span class="path">Install/installpage.html</span> file depends on the project
+                requirements. Install page can be access through <span
+                    class="path">http://localhost/(project_folder)/<b>appinstall</b></span> route.
+            </p>
+            <p>
+                <b>App Logo</b><br>
+                Navigate to <span class="path">Install/logo</span> folder to store the logo of your application. You
+                should provide two different sizes of logo (96x96 and 192x192 pixels)
+            </p>
+            <p>
+                <b>App Manifest</b><br>
+                Application manifest file is located in <span class="path">Install/manifest.json</span>. This is a
+                configuration file of your PWA (how your app will look like on user's device, icons, app name, theme
+                color, etc.)
+            </p>
+            <div class="code">
+                <pre>
+{
+    "short_name": "App",
+    "name": "My App",
+    "description": "Lorem ipsum app manifest",
+    "icons": [
+        {
+            "src": "./logo/logo-96x96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "./logo/logo-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
+    ],
+    "theme_color": "#000",
+    "start_url": "http://localhost/myapp/",
+    "display": "standalone",
+    "background_color": "#000",
+    "orientation": "portrait"
+}</pre>
+            </div>
+            <p>
+                <b>short_name: </b> Short name of your application.<br>
+                <b>name: </b> The name of your application.<br>
+                <b>description: </b> The detailed description of your application.<br>
+                <b>icons: </b> Link of your application 96x96 and 192x192 logo.<br>
+                <b>theme_color: </b> The theme color of your app.<br>
+                <b>start_url: </b> When the user tap your app's icon, he/she will be redirected to this link (the
+                homepage
+                of your application).<br>
+                You can add other properties on the manifest.json file for better application performance. Read more
+                about other manifest properties.
+            </p>
+        </div>
+    </section>
+
+    <section class="boundaries">
+        <div class="container">
+            <h1>JSON C.R.U.D Operations</h1><br>
+            <b>Create, Read, Update, Delete</b>
+        </div>
+    </section>
+
+    <section id="read">
+        <div class="container">
+            <h3>Read JSON file data</h3>
+            <p>
+                Reading data from the json file.
+            </p>
+            <div class="code">
+                <pre>
+$data = JSON::read('json_file.json')
+
+print_r($data);</pre>
+            </div>
+            <p>
+                This will return a decoded associative array data.
+            </p>
+            <div class="code">
+                <pre>
+Array (
+    [0] => Array (
+        [id] => id60ffacf67e6b67.00721233
+        [name] => Mark Jason Penote Espelita
+        [age] => 21
+        [address] => Brgy. San Isidro Northern Samar, Philippines 
+    )
+    [1] => Array (
+        [id] => id40ccacf67e6b77.00776543
+        [name] => Mark Penote Espelita
+        [age] => 20
+        [address] => Brgy. San Isidro Northern Samar, Philippines 
+    )
+)</pre>
+            </div>
+            <p>
+                <b>Looping through data</b>
+            </p>
+            <div class="code">
+                <pre>
+$data = JSON::read('json_file.json')
+
+foreach($data as $key => $value){
+    echo $value['name'] . '< br >';
+}</pre>
+            </div>
+            <p>
+                <b>Output:</b>
+            </p>
+            <div class="code">
+                <pre>
+Mark Jason Penote Espelita
+Mark Penote Espelita</pre>
+            </div>
+            <p>
+                <b>Explain:</b><br>
+                <span class="path">JSON::read()</span> = JSON class has a read method for reading the data inside the
+                json file. This requires one argument (json filename).
+            </p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="pushinsert">
+        <div class="container">
+            <h3>Insert Data to JSON file (push method)</h3>
+            <p>
+                Inserting data to json file (push method).
+            </p>
+            <div class="code">
+                <pre>
+JSON::push('json_file.json', array(
+    'id' => JSON::id(),
+    'name' => $name,
+    'age' => $age,
+    'address' => $address
+));
+
+// or you can do it this way ------
+
+$obj = array(
+    'id' => JSON::id(),
+    'name' => $name,
+    'age' => $age,
+    'address' => $address
+));
+
+JSON::push('json_file.json', $obj);</pre>
+            </div>
+            <p>
+                <b>Explain:</b><br>
+                <span class="path">JSON::push()</span> = JSON class has push method for inserting data to the
+                <b>bottom</b> of json file.
+                This requires two arguments (json filename and data you want to insert)
+                <br>
+                <span class="path">JSON::id()</span> = simple method for generating random id.<br>
+                <span class="path">'json_file.json'</span> = json file where data will be inserted.<br>
+                <span class="path">array ('key' => 'value')</span> = associative array data to be inserted.<br>
+                <b>Note:</b> If the json file doesn't exist. It will automatically create it for you.<br>
+                <b>Result:</b><br>
+                <span class="path">json_file.json</span> content should be like this.
+            </p>
+            <div class="code">
+                <pre>
+[
+    {
+        "id": "id60ffacf67e6b67.00721233",
+        "name": "Mark Jason Penote Espelita",
+        "age": 21,
+        "address": "Brgy. San Isidro Northern Samar, Philippines"
+    }
+]</pre>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="unshiftinsert">
+        <div class="container">
+            <h3>Insert Data to JSON file (unshift method)</h3>
+            <p>
+                Inserting data to json file (unshift method).
+            </p>
+            <div class="code">
+                <pre>
+JSON::unshift('json_file.json', array(
+    'id' => JSON::id(),
+    'name' => $name,
+    'age' => $age,
+    'address' => $address
+));
+
+// or you can do it this way ------
+
+$obj = array(
+    'id' => JSON::id(),
+    'name' => $name,
+    'age' => $age,
+    'address' => $address
+));
+
+JSON::unshift('json_file.json', $obj);</pre>
+            </div>
+            <p>
+                <b>Explain:</b><br>
+                <span class="path">JSON::unshift()</span> = JSON class has unshift method for inserting data on the
+                <b>top</b> of json file.
+                This requires two arguments (json filename and data you want to insert)
+                <br>
+                <span class="path">JSON::id()</span> = simple method for generating random id.<br>
+                <span class="path">'json_file.json'</span> = json file where data will be inserted.<br>
+                <span class="path">array ('key' => 'value')</span> = associative array data to be inserted.<br>
+                <b>Note:</b> If the json file doesn't exist. It will automatically create it for you.<br>
+                <b>Result:</b><br>
+                <span class="path">json_file.json</span> content should be like this.
+            </p>
+            <div class="code">
+                <pre>
+[
+    {
+        "id": "id60ffacf67e6b67.00721233",
+        "name": "Mark Jason Penote Espelita",
+        "age": 21,
+        "address": "Brgy. San Isidro Northern Samar, Philippines"
+    }
+]</pre>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="remove">
+        <div class="container">
+            <h3>Remove data from JSON file</h3>
+            <p>
+                Removing one or more data from the JSON file using delete() method.
+            </p>
+            <div class="code">
+                <pre>
+JSON::delete('json_file.json', 'id', 'id60ffacf67e6b67.00721233');</pre>
+            </div>
+            <p>
+                <b>Logic:</b><br>
+                'Delete from json_file.json where id is id60ffacf67e6b67.00721233'<br>
+                This will remove an object from a JSON file if the key (id) matches the value
+                (id60ffacf67e6b67.00721233).<br>
+                You can use other key instead of id. Example: name, age, address, status, etc...
+            </p>
+            <p>
+                <b>Remove a user where name is Mark Jason Penote Espelita</b>
+            </p>
+            <div class="code">
+                <pre>
+JSON::delete('json_file.json', 'name', 'Mark Jason Penote Espelita');</pre>
+            </div>
+            <p>
+                <b>Remove a user where age is 21</b>
+            </p>
+            <div class="code">
+                <pre>
+JSON::delete('json_file.json', 'age', 21);</pre>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="update">
+        <div class="container">
+            <h3>Update data from JSON file</h3>
+            <p>
+                Updating one or more data from the JSON file using update() method.
+            </p>
+            <div class="code">
+                <pre>
+JSON::update('json_file.json', 'id', 'id60ffacf67e6b67.00721233', 'name', 'Marky Jason Penote Espelita');</pre>
+            </div>
+            <p>
+                <b>Logic:</b><br>
+                'Update the name to Marky Jason Penote Espelita from the json_file.json where id is
+                id60ffacf67e6b67.00721233'<br>
+                You can use other key instead of id. Example: name, age, address, status, etc...
+            </p>
+            <p>
+                <b>Another example:</b><br>
+                'Update the name to Marky Jason Penote Espelita from json_file.json where name is Mark Jason Penote
+                Espelita'
+            </p>
+            <div class="code">
+                <pre>
+JSON::update('json_file.json', 'name', 'Mark Jason Penote Espelita', 'name', 'Marky Jason Penote Espelita')</pre>
+            </div>
+            <p>
+                <b>Explain:</b><br>
+                <span class="path">JSON::update()</span> = JSON class has update method for updating data in the JSON
+                file.
+                This requires five arguments (json file, basis key, basis value, updatable key and new value)<br>
+            </p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="file">
+        <div class="container">
+            <h3>File Upload</h3>
+            <p>
+                Upload any type of file you want in just one line of code.
+            </p>
+            <div class="code">
+                <pre>
+Files::upload($_FILES['file'], './Assets/img/', ['jpg', 'png', 'jpeg'])</pre>
+            </div>
+            <p>
+                <b>Note:</b><br>
+                There are limitations on file size when uploading a file.
+            </p>
+            <p>
+                <b>Getting the filename of the uploaded file</b>
+            </p>
+            <div class="code">
+                <pre>
+Files::upload($_FILES['file'], './Assets/img/', ['jpg', 'png', 'jpeg'])
+
+$filename = Files::$filename;
+
+echo $filename;</pre>
+            </div>
+            <p>
+                This will echo a filename of the uploaded file.
+            </p>
+            <p>
+                <b>Explain:</b><br>
+                <span class="path">JSON::upload()</span> = JSON class has upload method for uploading a file to the
+                server.<br>
+                <span class="path">$_FILES['file']</span> = name of the file input from the form.<br>
+                <span class="path">'./Assets/img/'</span> = the path/folder where the file is stored after uploading,
+                you can use another folder if you want.<br>
+                <span class="path">['jpg', 'png', 'jpeg']</span> = valid extensions of the file to be uploaded. If the
+                user upload a file with different file extension, it will return an error.
+            </p>
+        </div>
+    </section>
+
+    <section class="boundaries">
+        <div class="container">
+            <h1>Local Storage Browser API</h1><br>
+            <b>For data persistency in the browser.</b>
+        </div>
+    </section>
+
+    <section class="locexplain">
+        <div class="container">
+            <p>
+                Localstorage is a data storage in the browser. It can be utilize for storing temporary or
+                permanent data in the client side, so the data will never lost during page reload.<br>
+                Localstorage is found on <span class="path">developer tools/Application/Storage</span>
+                <a href="./Documentation/img/localstorageimg.PNG">
+                    <img src="./Documentation/img/localstorageimg.PNG" alt="">
+                </a>
+                You can store a key - value pairs: objects, arrays, array of objects and more.<br>
+                <span class="path">key</span> = is the name of your data storage. In the image above, the key or the
+                name
+                of localstorage is <span class="path">Storage</span>. You can name it whatever you want.<br>
+                <span class="path">value</span> = is the data being stored. In the image above, the value is an array of
+                objects.
+            </p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="locread">
+        <div class="container">
+            <h3>Read Local Storage Data</h3>
+            <p>
+                Reading data from localstorage.
+            </p>
+            <div class="code">
+                <pre>
+let data = localstorage_read('Storage')
+
+console.log(data)</pre>
+            </div>
+            <p>
+                This will return a parsed javascript array of object.
+            </p>
+            <div class="code">
+                <pre>
+[
+    {
+        name: "Mark Jason",
+        age: 21
+    },
+    {
+        name: "Mark Jason",
+        age: 21
+    },
+    {
+        name: "Mark Jason",
+        age: 21
+    }
+]</pre>
+            </div>
+            <p>
+                <b>Looping through data.</b><br>
+                Code in <span class="path">custom.js</span>
+            </p>
+            <div class="code">
+                <pre>
+let data = localstorage_read('Storage');
+
+data.foreach((element) => {
+    console.log(element['name']);
+    console.log(element['age']);
+});</pre>
+            </div>
+            <p>
+                <b>Output:</b>
+            </p>
+            <div class="code">
+                <pre>
+Mark Jason
+21
+Mark Jason
+21
+Mark Jason
+21</pre>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="locinsert">
+        <div class="container">
+            <h3>Insert Local Storage Data</h3>
+            <p>
+                Inserting data to localstorage.
+            </p>
+            <div class="code">
+                <pre>
+localstorage_insert('Storage', {
+    name: "Marky Jason",
+    age: 20
+});</pre>
+            </div>
+            <p>
+                This will insert a new data to 'Storage' key.
+                <a href="./Documentation/img/newdata.PNG">
+                    <img src="./Documentation/img/newdata.PNG" alt="">
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="locupdate">
+        <div class="container">
+            <h3>Update Local Storage Data</h3>
+            <p>
+                Updating data to localstorage.
+            </p>
+            <div class="code">
+                <pre>
+localstorage_update('Storage', 'name', 'Marky Jason', 'name', 'Marky2 Jason')</pre>
+            </div>
+            <p>
+                <b>Logic:</b><br>
+                'Update name to Marky2 Jason in 'Storage' localstorage where name is Marky Jason'<br>
+                This will update the name to Marky2 Jason on the 'Storage' key.
+                <a href="./Documentation/img/update.PNG">
+                    <img src="./Documentation/img/update.PNG" alt="">
+                </a>
+                <b>Arguments:</b><br>
+                1st. <span class="path">'Storage'</span> = name of localstorage (key).<br>
+                2nd. <span class="path">'name'</span> = basis key.<br>
+                3rd. <span class="path">'Marky Jason'</span> = basis value.<br>
+                4th. <span class="path">'name'</span> = updatable key.<br>
+                5th. <span class="path">'Marky2 Jason'</span> = new value.<br>
+            </p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="locdelete">
+        <div class="container">
+            <h3>Remove Data from Local Storage</h3>
+            <p>
+                Removing a string value from local storage.<br>
+                <span class="path">String</span>
+            </p>
+            <div class="code">
+                <pre>
+localstorage_delete('Storage', (del => del.name === 'Marky2 Jason'))</pre>
+            </div>
+            <p>
+                Removing an integer or float from string value from local storage.<br>
+                <span class="path">Integer</span>
+            </p>
+            <div class="code">
+                <pre>
+localstorage_delete('Storage', (del => del.age === parseInt('21')))</pre>
+            </div>
+            <p>
+                <b>Logic:</b><br>
+                If we will execute the <span class="path">String</span>:<br>
+                'Remove an object where name is Marky2 Jason from 'Storage' localstorage key.'<br>
+                <b>Output:</b>
+                <a href="./Documentation/img/delete.PNG">
+                    <img src="./Documentation/img/delete.PNG" alt="">
+                </a>
+                The Marky2 Jason has been removed.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>
+                <b>Little Babe v1.0 Documentation 2021</b>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
